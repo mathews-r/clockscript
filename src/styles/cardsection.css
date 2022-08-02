@@ -1,0 +1,64 @@
+#divInput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+}
+
+.card-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 500px;
+}
+
+.buttonSearch {
+  height: 35px;
+  width: 60px;
+  border-radius: 5px;
+  border: 1px solid white;
+  cursor: pointer;
+  background-color: rgb(35, 103, 163);
+  color: white;
+}
+
+.buttonSearch:hover {
+  opacity: 0.8;
+}
+
+.input-city {
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 17px;
+  padding: 5px;
+}
+
+#cardInformation {
+  background-color: white;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: space-between;
+  width: 500px;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 0 0 0.5em black;
+  padding: 5px;
+}
+
+#city, #temperature, #temp_max, #temp_min, #pressure, #humidity {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(205, 203, 203);
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgb(132, 131, 131);
+  height: 50px;
+  width: 200px;
+  margin: 5px;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
