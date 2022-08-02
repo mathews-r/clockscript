@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/clockscript/static/css/main.f5f2e2b7.css",
-    "main.js": "/clockscript/static/js/main.e43b1bb1.js",
-    "index.html": "/clockscript/index.html",
-    "main.f5f2e2b7.css.map": "/clockscript/static/css/main.f5f2e2b7.css.map",
-    "main.e43b1bb1.js.map": "/clockscript/static/js/main.e43b1bb1.js.map"
+    "main.css": "/webweather/static/css/main.bc3520d4.css",
+    "main.js": "/webweather/static/js/main.1d4ebabe.js",
+    "index.html": "/webweather/index.html",
+    "main.bc3520d4.css.map": "/webweather/static/css/main.bc3520d4.css.map",
+    "main.1d4ebabe.js.map": "/webweather/static/js/main.1d4ebabe.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5f2e2b7.css",
-    "static/js/main.e43b1bb1.js"
+    "static/css/main.bc3520d4.css",
+    "static/js/main.1d4ebabe.js"
   ]
 }
