@@ -1,38 +1,9 @@
-#divInput {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 300px;
-}
-
 .card-section {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   height: 500px;
-}
-
-.buttonSearch {
-  height: 35px;
-  width: 60px;
-  border-radius: 5px;
-  border: 1px solid white;
-  cursor: pointer;
-  background-color: rgb(35, 103, 163);
-  color: white;
-}
-
-.buttonSearch:hover {
-  opacity: 0.8;
-}
-
-.input-city {
-  height: 45px;
-  border-radius: 5px;
-  border: 1px solid black;
-  font-size: 17px;
-  padding: 5px;
 }
 
 #cardInformation {
@@ -61,4 +32,34 @@
   margin: 5px;
   font-size: 18px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#divInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 122px;
+}
+
+.buttonSearch {
+  height: 35px;
+  width: 60px;
+  border-radius: 5px;
+  border: 1px solid white;
+  cursor: pointer;
+  background-color: rgb(35, 103, 163);
+  color: white;
+  margin-left: 7px;
+}
+
+.buttonSearch:hover {
+  opacity: 0.8;
+}
+
+.input-city {
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 17px;
+  padding: 5px;
 }

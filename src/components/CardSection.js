@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import fetchApi from "../services/fetchAPI";
 
+import fetchAPI from "../services/fetchAPI";
 import "../styles/cardsection.css";
 
 export default class CardSection extends Component {
@@ -10,7 +10,6 @@ export default class CardSection extends Component {
     this.state = {
       data: "",
       city: "",
-      dataSearch: {},
     };
   }
 
@@ -33,31 +32,32 @@ export default class CardSection extends Component {
     this.setState({ data: data });
   };
 
-  clickSearch = async (city) => {
-    const dataSearch = await fetchApi(city);
-    this.setState({ dataSearch: dataSearch })
+  handleChange = ({ target }) => {
+    const { name, value } = target;
+    this.setState({ [name]: value });
   };
 
-  handleChange = ({target}) => {
-    const { name, value } = target;
-    this.setState({ [name]: value })
-  }
+  clickSearch = async (city) => {
+    const dataSearch = await fetchAPI(city);
+    this.setState({ data: dataSearch, city: "" });
+  };
 
   render() {
     const { data, city } = this.state;
     return (
       <section className="card-section">
+
         <div id="divInput">
           <input
             className="input-city"
             name="city"
-            value={ city }
-            onChange={ this.handleChange }
+            value={city}
+            onChange={this.handleChange}
             type="text"
             placeholder=" Busque por uma cidade"
           />
           <button
-            type="button"
+            type="submit"
             onClick={() => this.clickSearch(city)}
             className="buttonSearch"
           >
@@ -65,27 +65,25 @@ export default class CardSection extends Component {
           </button>
         </div>
 
-        <div id="cardInformation">
-          {data ? (
-            <>
-              <div id="city">{`${data.name}, ${data.sys.country}`}</div>
-              <div id="temp_max">{`Máx: ${data.main.temp_max.toFixed(
-                1
-              )} °C`}</div>
-              <div id="temp_min">{`Min: ${data.main.temp_min.toFixed(
-                1
-              )} °C`}</div>
-              <div id="temperature">
-                {`Agora: ${data.main.feels_like.toFixed(1)} °C 
-              ${data.weather[0].description}`}
-              </div>
-              <div id="pressure">{`Pressão: ${data.main.pressure} hPa`}</div>
-              <div id="humidity">{`Umidade: ${data.main.humidity} %`}</div>
-            </>
-          ) : (
-            ""
-          )}
-        </div>
+        {data ? (
+          <div id="cardInformation">
+            <div id="city">{`${data.name}, ${data.sys.country}`}</div>
+            <div id="temp_max">{`Máx: ${data.main.temp_max.toFixed(
+              1
+            )} °C`}</div>
+            <div id="temp_min">{`Min: ${data.main.temp_min.toFixed(
+              1
+            )} °C`}</div>
+            <div id="temperature">
+              {`Agora: ${data.main.feels_like.toFixed(1)} °C 
+    ${data.weather[0].description}`}
+            </div>
+            <div id="pressure">{`Pressão: ${data.main.pressure} hPa`}</div>
+            <div id="humidity">{`Umidade: ${data.main.humidity} %`}</div>
+          </div>
+        ) : (
+          ""
+        )}
       </section>
     );
   }
